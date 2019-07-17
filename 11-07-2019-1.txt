@@ -1,0 +1,7 @@
+Required Tools and Softwares
+1) node and npm installed
+2) Editors: Visual Studio or Visual Studio Code.
+
+3) Visual Studio users => install windows Terminal plugun.
+4) Preferred browser during development: Chrome.
+5) After build - youo can test it in IE.

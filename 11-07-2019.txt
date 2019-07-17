@@ -1,0 +1,26 @@
+1) install nodejs -> npm gets pre installed.
+min node version > 8.0.0 (for latest commands to work properly)
+min npm version > 5.0.0 (for latest commands to work properly)
+2) create react app. 
+3) $ npx create-react-app demo-app (creates a react project folder with name demo-app)
+#we can give the project folder name of your choice. It creates the project folder with whatever name you give.
+# $ npx create-react-app e-commerce(will create a project folder with name e-commerce)
+# $ npx create-react-app e-learning (will create a project folder with name e-learning)
+note: do not use capital names for your project folder. It will throw errors.
+#E-learning => X not valid project folder name
+#e-learning => a valid project folder name. 
+4) after creating your project folder, navigate to the project folder. 
+$ cd demo-app
+5) $npm start (will start your demo-app react application on port 3000 if it is vacant else it will start on other port)
+
+6) Another way to create react app
+$npm i -g create-react-app (First install create-react-app globally. i:insall , -g:global. This command installs create-react-app globally)
+$ create-react-app demo-app(creates your react project-folder with name demo-app)
+
+7) package.json
+8) scripts : you can add your own script command identifier. 
+9) npm i 
+10) npm uninstall library_name. 
+11) difference between npmjs repo and github repo : example usecase bootstrap
+12) demo-app folder structure. 
+13) Installing chrome dev tools. (react dev tools for chrome).

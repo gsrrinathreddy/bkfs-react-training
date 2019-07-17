@@ -1,0 +1,23 @@
+basic building block of a component
+
+1) import statements
+2) component definition - either a functional component or a class based component.
+# functional component = is a pure javascript/typescript function
+# class component = is a pure javascript/typescript class.
+
+3) export the component for so that it can be imported and used in other components 
+4) #class component => render method is a must which will have a return method within which we define the JSX/TSX
+# functional component => will not have render method , but will have a return method within which we will define the JSX/TSX.
+
+# only class components will have lifecycle methods and constructor. 
+# functional components cannot handle state. only class components can hadle state.
+# functional components(SFC - stateless functional component) can be called as pure dry components used only to display data. The data that does not change over time.  Only parent component can change the data of the functional component. it cannot change its own data values. 
+
+# STATE: state is nothing but just data and values only but which changes over time. This data can be defined and changed within the component only.
+
+# PROPS: props is nothing but data only. but dry data which does not change over time. and props is a external data passed into a component for the component to use it internally. 
+
+# componentDidMount(): 
+
+
+

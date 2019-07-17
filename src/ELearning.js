@@ -7,7 +7,7 @@ import CorpTraining from './elearning/pages/CorpTraining';
 import GovtTraining from './elearning/pages/GovtTraining';
 import HigherEdu from './elearning/pages/HigherEdu';
 import SoftwareTraining from './elearning/pages/SoftwareTraining';
-
+import data from './data';
 
 export default class ELearning extends Component {
     render() {
@@ -16,8 +16,8 @@ export default class ELearning extends Component {
             <Router>
               <Header/>
                <LandingPage/>
-               <Route path='/corporate-training' component={CorpTraining}/>
-               <Route path='/govt-training' component={GovtTraining}/>
+               <Route path='/corporate-training' render={() => <CorpTraining data={data.CorpTraining} userStatus="false" title="corporate courses"/>}/>
+                <Route path='/govt-training' render={()=><GovtTraining data={data.CorpTraining}/>}/>
                <Route path='/high-edu' component={HigherEdu}/>
                <Route path='/software-training' component={SoftwareTraining}/>
                <Footer/>

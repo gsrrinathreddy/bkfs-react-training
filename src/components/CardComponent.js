@@ -1,7 +1,7 @@
 import React from 'react'
 import {Card,Button} from 'react-bootstrap';
 
-export default function CardComponent(props) {
+export default function CardComponent(items) {
     
     return (
         <div>
@@ -9,16 +9,16 @@ export default function CardComponent(props) {
                 <Card.Img variant="top" src="holder.js/100px180" />
                 <Card.Body>
                     <Card.Title>
-                    {props.title}
+                    {items.title}
                     </Card.Title>
                     <Card.Text>
-                   {props.desc}
+                   {items.desc}
                     </Card.Text>
                     <Card.Text>
-                   duration: {props.duration}
+                   duration: {items.duration}
                     </Card.Text>
                     <Card.Text>
-                   Faculty: {props.faculty}
+                   Faculty: {items.faculty}
                     </Card.Text>
                     <Button variant="primary">Course Details</Button>
                 </Card.Body>

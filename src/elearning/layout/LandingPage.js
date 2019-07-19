@@ -1,69 +1,74 @@
-import React, { Component } from 'react'
+import React, { Component,useState} from 'react'
 import './Layout.css'
 import {Button} from 'react-bootstrap';
 import CardComponent from '../../components/CardComponent';
 
-export default class LandingPage extends Component {
-    constructor(){
-        super();
-        this.state = {
-            counter:0 ,
-            seats:300,
-            slectedSeats:0,
-           
-        }
+export default function LandingPage()  {
     
+      const [counter,setCounter] = useState(0)  
+      const [seats,setSeats] = useState(300) 
+      const [selectedSeats,setselectedSeats] = useState(0)  
+      const [isSeatSelected,setIsSeatSelected] = useState(false);
+      const [stringValue,setStringValue] = useState("I am Hooks");
+      const [arrayValue,setArrayValue] = useState([4,6]);
+      const [objectValue,setObjectValue] = useState({name:"hooks"});
+  
 
-      this.decrementHandler = this.decrementHandler.bind(this);
-      this.incrementHandler = this.incrementHandler.bind(this);
-      this.confirm = this.confirm.bind(this);
-      this.resetCounter = this.resetCounter.bind(this);
-    }
-    decrementHandler(){
-        this.setState({
-            counter: --this.state.counter
-        })
-    }
-    incrementHandler(){
+    console.log("the counter value is",counter)
+    console.log("the seats value is",seats)    
+    console.log("the selected Seats value is",selectedSeats)  
+    console.log("the isSeatSelected value is",isSeatSelected)  
+    console.log("the stringValue value is",stringValue) 
+    console.log("the arrayValue value is",arrayValue) 
+    console.log("the objectValue value is",objectValue)    
+     
+    
+    
+    function decrementHandler(a){
+       console.log("dh",a)
+       setCounter(counter+1)
+       console.log("the counter value is",counter)   
        
-        this.setState({
-            counter: ++this.state.counter
-        })
+       setIsSeatSelected(true)
+       console.log("the boolean value is",isSeatSelected)  
+       
+       setArrayValue([5,6])
+       console.log("the arrayValue value is",arrayValue)  
+    }
+
+   function  incrementHandler(){
+     
 
     }
-    resetCounter(){
-        this.setState({
-            counter:0
-        })
+    function resetCounter(){
+       
     }
-    confirm(){
-        this.setState({
-            seats : this.state.seats - this.state.counter
-        })
+    function confirm(){
+      
     }
-    render() {
+   
         return (
             <div>
             <div className="row">
-                <h1>Hi Hello</h1>
-                <Button onClick={this.decrementHandler} variant="primary" size="lg" >
+                <h1></h1>
+                <Button onClick={()=>decrementHandler("hiiiiiiiii")} variant="primary" size="lg" >
                          decrement
                 </Button>
-                <h1>{this.state.counter}</h1>
-                <Button onClick={this.incrementHandler} variant="primary" size="lg" >
+                <h1>Hi Counter</h1>
+                <Button onClick={incrementHandler} variant="primary" size="lg" >
                         increment
                 </Button>
               
                 
-                 <button onClick={this.confirm}>Confirm the seats</button>
+                 <button onClick={confirm}>Confirm the seats</button>
                 <div>
-                    <h4>Total Seats : {this.state.seats}</h4>
+                    <h4>Total Seats : </h4>
                 </div>
 
                
             </div>
-             <CardComponent reset={this.resetCounter} title={this.state.counter} desc="For me state is confusing"/>
+             <CardComponent reset={resetCounter} title="Hi" desc="For me state is confusing"/>
              </div>
         )
-    }
+    
 }

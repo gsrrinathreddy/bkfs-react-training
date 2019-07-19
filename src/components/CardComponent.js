@@ -2,7 +2,7 @@ import React from 'react'
 import {Card,Button} from 'react-bootstrap';
 
 export default function CardComponent(items) {
-    
+  
     return (
         <div>
             <Card style={{ width: '18rem' }}>
@@ -20,7 +20,7 @@ export default function CardComponent(items) {
                     <Card.Text>
                    Faculty: {items.faculty}
                     </Card.Text>
-                    <Button variant="primary">Course Details</Button>
+                    <Button variant="primary" >Course Details</Button>
                 </Card.Body>
             </Card>
         </div>

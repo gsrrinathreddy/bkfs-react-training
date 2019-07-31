@@ -1,0 +1,11 @@
+STEPS for React Router Usage.
+
+1) install react-router-dom
+$ npm i react-router-dom.
+2) import BrowserRouter and Router from react-router-dom in the parent component. (App)
+3) wrap the AppBody and Header component within Router.
+4) Add all Routes in place AppBody.
+# <Route path='/path_name' component={component-name}/>
+5) Add Links to your Navbar or Header.
+# <Link to='/path-name>path-link-name</Link> 
+note: import Link from react-router-dom in the file where you use Link component.

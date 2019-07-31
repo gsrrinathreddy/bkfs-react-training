@@ -1,0 +1,15 @@
+ decrementHandler(){
+       
+    }
+
+syntax to define functions in class components.
+
+But same syntax is not accepted in functional components.
+
+function decrementHandler(){
+
+}
+
+const abc = () => {
+
+}

@@ -1,0 +1,29 @@
+Basic building blocks of React Application
+1) components
+2) state
+3) props
+4) JSX
+
+other important extra standard features of react are
+1) react-router
+2) state-management using Redux/flux/mobx
+3) React Hooks. 
+
+A Component is nothing but (JSX + CSS + JS code used to gether to display on the browser)
+Component Structure:
+
+import statements
+component definition/declration
+exporting the component.
+
+Component definition:
+A component can be defined in the following ways
+1) class component
+2) functional component. 
+
+Prior to version 16.8 (V.V.P interview Question)
+# The components were divided as stateless and staeful components.
+# All class components were called as state components and all functional components were called as stateless components.
+
+
+

@@ -1,0 +1,15 @@
+1) Create a empty project folder
+2) migrate to your project folder. 
+3) Open VSCode in your project folder
+4) Open terminal in the VSCODE.
+5) create the package.json file -> initializing the package.json file.
+# $ npm init (This  command initializes the package.json file.)
+# $ npm init -y (Will create your package.json file with default params).
+
+6) Create a src folder
+# mkdir src.
+7) Create 3 files outside the src folder
+# .babelrc file (To set TS related dependencies to transpile to JS)
+# index.html -> The html file which runs in the browser.
+# Add the script tag to your index.html file. (default adding the bundle.js)
+# create webpack.config.js file. (module builder file - build config file). 

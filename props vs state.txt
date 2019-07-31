@@ -1,0 +1,22 @@
+STATE
+
+1) If user want to change a value through some interaction without hitting the server, then those values you should initialize use state. 
+
+2) Assign the initial state values to it.
+
+Q) Where to you assign the initial state?
+A) You assign it inside the constructor using this.state={}
+
+Q) How to use the state value.
+A) In JSX or any where else we use the state value using this.state.value . In JSX wrap it in {this.state.value}
+
+Q) How do you change the state value?
+A) In order
+
+props: passing anything into a component through assigning attribute values.
+=> a json object
+=> a string
+=> any function
+=> even a state value. 	
+
+

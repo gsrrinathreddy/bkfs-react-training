@@ -1,0 +1,10 @@
+State
+
+1) We can define state only in the class Components.
+2) We first have to initialize the state value in the constructor. 
+3) In order to change the state we will have to use the setState().
+4) To use the state value in the app we use this.state.value everywhere in the component. 
+
+We can change state from within the same component using setState();
+How to change the state of the parent component from the child component? 
+Passing State from one component to other component. 

@@ -1,0 +1,48 @@
+When you click on any one of the following to fetch the data:- 
+1) Button
+2) Tab bar
+3) Menu Bar
+4) Dropdown Menu
+5) Sidebar menu
+6) Image Thumbnail
+7) Video Thumbnail
+8) Google Map
+9) A Card Item etc 
+10) Tables (Click to filter, fetch specific category data etc).
+
+2 things can happen:-
+#1) We directly write a clickHandler Function on the item user has clicked to handle the user request.
+#2) Load a complete new page through routing. 
+
+In the both cases we have to call the action creators(This is called as dispathcing an action.)
+case 1:- If you are writing a clickhandler function you will call the actions from the the click handler function. 
+case 2: If you are loading a new page or a new component then you will call the action creators from the componentDidMount() method.
+
+Q) What are Action Creators?
+A) Action creators are pure JS functions.  
+2) What do the Action Creators do ?
+A) They have 2 tasks to do:-
+#1) Fetch data from the server.(This is the place where we make our axios or fetch calls). You are making a request to the server in this action creator.
+#2) Return a data Object fetched from the server or any other to the Reducer along with the action type. 
+
+Q) How do you connect a Action creator to the React Component?
+A)
+#  install react-redux.
+#We import {connect} method from react-redux. It is a HOC. We wrap the entire react component into the connect() method. 
+#We pass the action creators into the connect method.
+
+#export default connect(mapStateToprops,mapDispatchToProps)(Profiles);
+
+export default connect(mapStateToprops,{getProfilesAction})(Profiles);
+
+Q) What is a reducer?
+A) A reducer is a pure function with switch case statements. 
+# It takes 
+
+
+Redux is a unidirectional data flow . comp-> actions->reducer->store->comp
+# mapDispatchToProps => To call action creators ,
+{list of action creators}
+# mapStateToProps => To fetch data from redux. 
+ 
+

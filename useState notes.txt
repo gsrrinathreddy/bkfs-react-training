@@ -1,0 +1,18 @@
+STATE: 
+
+useState() we use to define state in functions. 
+
+const [value,setValue] = useState(initial Value);
+
+	setValue(newValue);
+** value => It is a state variable which holds the state value. 
+# this value can be either a
+@ String,
+@ Number,
+@ Boolean,
+@ Array,
+@ Object
+
+** setValue => this is the method that changes the state of the value. 
+
+** useState(initialValue): => initialValue is the value which is assigned to the value.

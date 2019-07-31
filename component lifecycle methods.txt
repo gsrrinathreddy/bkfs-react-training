@@ -1,0 +1,27 @@
+Order of Life Cycle Methods executed
+
+1) constructor()
+	this.state={
+	} and this.setState({}) => 
+
+const [value,setValue] = useState[initialValue]
+2) render()
+3) componentDidMount() => useEffect(fetchCall,[])
+4) componentDidUpdate() => 
+5) componentWillUnmount()
+
+deprecated LifeCycle Methods => 
+1) componentWillReceiveProps();
+2) componentWillUpdate();
+3) componentWillMount();
+
+New LifeCycle Methods added:
+1) getDerivedStateFromProps();
+2) getSnapShotBeforeUpdate();
+	
+Link for external api data
+https://jsonplaceholder.typicode.com/
+
+install axios;
+$ npm i axios.
+import axios from 'axios';

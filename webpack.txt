@@ -1,0 +1,24 @@
+1) create package.json file 
+$ npm init => (will create the package.json file for the application. It prompts you inbetween for few questions- either answer or leave it).
+
+2) Create a src folder. 
+3) Outside the src folder - create the following files
+# .babelrc (This is the most important key file - this holds all the presets(transpiling lib) which actually convert your typescript code into js). 
+=> @babel/presets-env @babel/presets-react @babel/presets-react-dom
+# webpack.dev.config.js (FOr development mode).
+# webpack.prod.config.js (for production mode).
+# webpack.server.config.js(If you have server also on the same project folder)
+
+Webpack: Works  simple principles
+1) mode:
+2) entrypoint:
+3) outputpoint: 
+4) rules: 
+5) plugins and extentions.
+
+useState
+useEffect
+useReducer
+useContext
+useRef
+useMemo 

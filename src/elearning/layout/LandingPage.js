@@ -36,38 +36,15 @@ export default function LandingPage()  {
        console.log("the arrayValue value is",arrayValue)  
     }
 
-   function  incrementHandler(){
-     
-
-    }
-    function resetCounter(){
-       
-    }
-    function confirm(){
-      
-    }
-   
+  
         return (
             <div>
             <div className="row">
                 <h1></h1>
-                <Button onClick={()=>decrementHandler("hiiiiiiiii")} variant="primary" size="lg" >
-                         decrement
-                </Button>
-                <h1>Hi Counter</h1>
-                <Button onClick={incrementHandler} variant="primary" size="lg" >
-                        increment
-                </Button>
               
-                
-                 <button onClick={confirm}>Confirm the seats</button>
-                <div>
-                    <h4>Total Seats : </h4>
-                </div>
-
                
             </div>
-             <CardComponent reset={resetCounter} title="Hi" desc="For me state is confusing"/>
+           
              </div>
         )
     

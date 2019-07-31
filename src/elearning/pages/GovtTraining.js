@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import data from '../../data';
 import CardComponent from '../../components/CardComponent';
-export default class GovtTraining extends Component {
+ class GovtTraining extends Component {
     render() {
         let courses = data.GovtTraining;
         return (
@@ -17,3 +17,5 @@ export default class GovtTraining extends Component {
         )
     }
 }
+
+export default GovtTraining;

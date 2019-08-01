@@ -8,11 +8,14 @@ import GovtTraining from './elearning/pages/GovtTraining';
 import HigherEdu from './elearning/pages/HigherEdu';
 import SoftwareTraining from './elearning/pages/SoftwareTraining';
 import data from './data';
+import {Provider} from 'react-redux';
+import store from './store';
 
 export default class ELearning extends Component {
     render() {
         return (
             <div>
+        <Provider store={store}>
             <Router>
               <Header/>
                <LandingPage/>
@@ -23,6 +26,8 @@ export default class ELearning extends Component {
                <Footer/>
             </Router>
               
+        </Provider>
+           
             </div>
         )
     }

@@ -1,0 +1,19 @@
+Configuring Redux with React. 
+
+1) $ npm i react-redux redux redux-thunk
+# redux -> core redux library
+# react-redux -> wrapper library to connect redux with react. 
+# redux-thunk -> middleware to connect to the server from action creators. 
+# alternatives for redux-thunk -> redux-saga and redux-observables(To understand redux-observables knowing the basics of RXJS is important - the terminology, patterns and fancy keywords used in RXJS) 
+# rxjs. -> Reactive Javascript (pure)- avery very useful and powerful library which uses the publisher-subscriber design pattern.   
+2) Create 2 folders named 
+#reducers
+
+3) create a store.js file
+
+
+
+
+
+# actions
+3) create a file names store.js in the src folder. 

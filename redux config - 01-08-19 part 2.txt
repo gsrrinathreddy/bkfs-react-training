@@ -1,0 +1,87 @@
+4)
+STEP2:  createStore
+
+# import {createStore,applyMiddleware,compose} from 'redux';
+#createStore = It is the store house for data storage
+# compose => for combining all the reducers and also getting the data from the combined reducers. 
+#import thunk from 'redux-thunk'; (thunk is the middleware)
+#import rootReducer from './reducers';(It is the combination of all the reducers)
+
+create 2 variables
+# create a intialState and initialize it to null
+# assign the thunk middleware to a constant.
+
+const initialState = {};
+const middleware = [thunk];
+
+Last Step : Create a store using createStore
+
+const store = createStore(
+                    rootReducer,
+                    initialState,
+                    compose(
+                          applyMiddleware(...middleware),
+                          window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+                    )
+                    
+              );
+ createStore takes in 3 parameters
+#1) rootReducer
+#2) initialState value
+#3) compose method into which we pass the middleware. 
+#4) this parameter is for devtools extension.
+
+STEP 3: Go To App.js 
+
+import Provider from react-redux. 
+We will pass the store into Provider component 
+The Provider is wrapped over your App(The top most parent component) Component.
+
+STEP 4: Create rootreducer. 
+
+import {combineReducers} from 'redux';
+
+export default combineReducers({
+    
+})
+
+STEP 5: create types.js file and create a action_type. 
+
+STEP 6: create a action creator to fetch data from the server.
+
+# import axios from 'axios';
+# import action types from types.js;
+
+export const actionCreator = () => dispatch=>{
+ 
+  axios.get(url)
+       .then(res => 
+        dispatch({
+          type:ACTION_TYPE,
+          payload:res.data
+        })
+      ).catch(err => console.log(err)
+      )
+
+}
+
+
+STEP 7: create a reducer to change the state based on the action_type
+
+# import action type 
+# create an initial state for the values you use
+# export the reducer. The reducer takes in two parameters
+@1) initialState
+@2) action Object dispatched from the action creator. 
+
+STEP 8: connect the React Component to action creators and store. 
+
+
+
+ 
+
+ 
+
+
+
+

@@ -8,6 +8,7 @@ import GovtTraining from './elearning/pages/GovtTraining';
 import HigherEdu from './elearning/pages/HigherEdu';
 import SoftwareTraining from './elearning/pages/SoftwareTraining';
 import data from './data';
+import Register from './elearning/pages/auth/Register';
 import {Provider} from 'react-redux';
 import store from './store';
 
@@ -23,6 +24,8 @@ export default class ELearning extends Component {
                 <Route path='/govt-training' render={()=><GovtTraining data={data.CorpTraining}/>}/>
                <Route path='/high-edu' component={HigherEdu}/>
                <Route path='/software-training' component={SoftwareTraining}/>
+               <Route path='/register' component={Register}/>
+               
                <Footer/>
             </Router>
               

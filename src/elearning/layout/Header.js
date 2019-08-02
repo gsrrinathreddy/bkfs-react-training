@@ -60,7 +60,9 @@ class Header extends Component {
                   Login              
                </Nav.Link>
               <Nav.Link >  
-               Register
+              <Link to='/register'>
+                Register
+                </Link>
               </Nav.Link>
                </Nav>
           </Navbar.Collapse>

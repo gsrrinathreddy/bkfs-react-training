@@ -57,7 +57,10 @@ class Header extends Component {
             </Form>
             <Nav className="mr-auto">
               <Nav.Link >
-                  Login              
+              <Link to='/login'>
+              Login
+                </Link>
+                              
                </Nav.Link>
               <Nav.Link >  
               <Link to='/register'>

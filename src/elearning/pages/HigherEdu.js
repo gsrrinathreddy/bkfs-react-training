@@ -43,6 +43,7 @@ class HigherEdu extends Component {
     }
     render() {
         console.log(this.props);
+        
        // console.log("Hi I ma render getting executed" + new Date());
         // const element = this.props.posts.map(post => {
         //     return (

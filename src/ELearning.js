@@ -11,7 +11,7 @@ import data from './data';
 import Register from './elearning/pages/auth/Register';
 import {Provider} from 'react-redux';
 import store from './store';
-
+import Login from './elearning/pages/auth/Login';
 export default class ELearning extends Component {
     render() {
         return (
@@ -25,6 +25,7 @@ export default class ELearning extends Component {
                <Route path='/high-edu' component={HigherEdu}/>
                <Route path='/software-training' component={SoftwareTraining}/>
                <Route path='/register' component={Register}/>
+               <Route path='/login' component={Login}/>
                
                <Footer/>
             </Router>

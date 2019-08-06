@@ -4,9 +4,9 @@ import './index.css';
 import ELearning from './ELearning';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
-import Movies from './pages/Movies';
+import Movies from './Movies';
 
-ReactDOM.render(<ELearning/> ,
+ReactDOM.render(<Movies/> ,
 document.getElementById('bkfs'));
 
 // If you want your app to work offline and load faster, you can change

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Form,Button} from 'react-bootstrap';    
 import {connect} from 'react-redux';
 import {registerUserAC} from '../../../actions/authActions'
+import {Typeahead} from 'react-bootstrap-typeahead';
 import './Register.css';
 
 class Register extends Component {
@@ -11,7 +12,8 @@ class Register extends Component {
             name:"",
             email:"",
             password:"",
-            password2:""           
+            password2:"",
+            seats:""               
         }
         this.onChangeHandler = this.onChangeHandler.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -29,7 +31,8 @@ class Register extends Component {
             name: this.state.name,
             email:this.state.email,
             password:this.state.password,
-            password2:this.state.password2
+            password2:this.state.password2,
+            seats:this.state.seats
         }
         console.log(newUser)  
         this.props.registerUserAC(newUser,this.props.history) ;     
@@ -58,7 +61,22 @@ class Register extends Component {
                     <Form.Label>Confirm Password</Form.Label>
                     <Form.Control type="password" name="password2" value={this.state.confirmPassword} onChange={this.onChangeHandler} placeholder="Confirm Password" />
                 </Form.Group>
-               
+                <Form.Group controlId="exampleForm.ControlSelect1">
+                    <Form.Label>Example select</Form.Label>
+                    <Form.Control as="select" name="seats" value ={this.state.seats} onChange={this.onChangeHandler}>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </Form.Control>
+                </Form.Group>
+                <Typeahead
+                   
+                    labelKey="name"
+                   
+                    placeholder="Choose a state..."
+                />
                 <Button variant="primary" onClick={this.onSubmit}type="submit">
                     Submit
                 </Button>

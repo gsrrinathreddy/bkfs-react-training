@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Form,Button} from 'react-bootstrap';    
 import {connect} from 'react-redux';
 import {registerUserAC} from '../../../actions/authActions'
-import {Typeahead} from 'react-bootstrap-typeahead';
+
 import './Register.css';
 
 class Register extends Component {
@@ -38,9 +38,11 @@ class Register extends Component {
         this.props.registerUserAC(newUser,this.props.history) ;     
    }
     render() {
-        console.log("this",this)
+        console.log("this",this.props.registeredUserData.registerUserData.name)
+        let nameElement = <p>{this.props.registeredUserData.registerUserData.name}</p>
         return (
             <div className="register">
+                {nameElement}
             <Form>
             <Form.Group controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
@@ -71,12 +73,6 @@ class Register extends Component {
                     <option>5</option>
                     </Form.Control>
                 </Form.Group>
-                <Typeahead
-                   
-                    labelKey="name"
-                   
-                    placeholder="Choose a state..."
-                />
                 <Button variant="primary" onClick={this.onSubmit}type="submit">
                     Submit
                 </Button>
@@ -86,5 +82,8 @@ class Register extends Component {
     }
 }
 
+const mapStateToProps = state =>({
+    registeredUserData : state.posts
+})
 
-export default connect(null,{registerUserAC})(Register);
+export default connect(mapStateToProps,{registerUserAC})(Register);

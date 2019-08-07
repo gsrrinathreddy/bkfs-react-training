@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Navbar,Nav,Form,FormControl,Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-
+import {connect} from 'react-redux';
 class Header extends Component {
   constructor(props){
     super(props)
@@ -12,7 +12,9 @@ class Header extends Component {
   }
   // All lifecycle methods between render and constructor. 
     render() {
-
+      console.log("Header", this.props);
+      let isAuthenticated = this.props.loggedUserData.isAuthenticated;
+      
       // All function definitions have to go between class/constructor
       // and render method or below render method.
     // All logic has to go between render and return method  
@@ -77,5 +79,7 @@ class Header extends Component {
 
     // write the methods here also. 
 }
-
-export default Header;
+const mapStateToProps = state => ({
+  loggedUserData:state.posts
+})
+export default connect(mapStateToProps,{})(Header);

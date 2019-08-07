@@ -1,7 +1,10 @@
-import {GET_POSTS,GET_COMMENTS} from '../actions/types';
+import {GET_POSTS,GET_COMMENTS,REGISTER_USER, LOGGED_USER} from '../actions/types';
 const initialState = {   
     posts:{},
-    comments:{}
+    comments:{},
+    registerUserData:{},
+    isAuthenticated:false,
+    loggedUserData:{}
 }
 
 export default function(state= initialState, action){
@@ -17,7 +20,17 @@ export default function(state= initialState, action){
               ...state,               
               comments: action.payload
          }
-      
+         case REGISTER_USER :
+             return {
+                 ...state,
+                 registerUserData:action.payload
+             }
+         case LOGGED_USER:
+             return {
+                 ...state,
+                 isAuthenticated:true,
+                 loggedUserData:action.payload
+             }    
         default:
         return state;
        

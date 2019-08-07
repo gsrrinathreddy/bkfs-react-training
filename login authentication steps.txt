@@ -1,0 +1,17 @@
+LOGIN AUTHENTICATION
+
+STEP 1: USER REGISTERS
+STEP 2: After Successfully registering when user Logins the server responds with a JWT token
+
+STEP 3: We have to store this token in the Local Storage. 
+
+STEP 4: We have to assign this token as header in axios. 
+
+axios.defaults.headers.common['Authorization'] = token;
+
+STEP 5: Decode the token to retrieve the user information.
+
+STEP 6: Dispatch this information(username , user id etc) to the reducer 
+
+STEP 7: Any component can access the data from the reducer by connecting to it and through mapStateToProps. 
+
